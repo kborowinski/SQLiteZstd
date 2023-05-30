@@ -700,29 +700,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2fd0db749597d91ff862fd1d55ea87f7855a744a8425a64695b6fca237d1dad1"
 
 [[package]]
-name = "sqlite-zstd"
-version = "0.3.2"
-dependencies = [
- "anyhow",
- "chrono",
- "csv",
- "env_logger",
- "lazy_static",
- "log",
- "lru_time_cache",
- "names",
- "owning_ref",
- "pretty_assertions",
- "procfs",
- "rand",
- "rusqlite-le",
- "serde",
- "serde_json",
- "structopt",
- "zstd",
-]
-
-[[package]]
 name = "stable_deref_trait"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -931,6 +908,29 @@ name = "windows_x86_64_msvc"
 version = "0.36.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c811ca4a8c853ef420abd8592ba53ddbbac90410fab6903b3e79972a631f7680"
+
+[[package]]
+name = "zeestd"
+version = "0.3.2"
+dependencies = [
+ "anyhow",
+ "chrono",
+ "csv",
+ "env_logger",
+ "lazy_static",
+ "log",
+ "lru_time_cache",
+ "names",
+ "owning_ref",
+ "pretty_assertions",
+ "procfs",
+ "rand",
+ "rusqlite-le",
+ "serde",
+ "serde_json",
+ "structopt",
+ "zstd",
+]
 
 [[package]]
 name = "zstd"

@@ -2,7 +2,7 @@ use crate::{util::*, *};
 use anyhow::Context as AContext;
 use rusqlite::functions::Context;
 use rusqlite::types::ToSqlOutput;
-use rusqlite::types::Value;
+// use rusqlite::types::Value;
 use rusqlite::OptionalExtension;
 use rusqlite::{named_params, params};
 use std::collections::HashMap;
@@ -369,7 +369,8 @@ pub fn zstd_enable_transparent<'a>(ctx: &Context) -> anyhow::Result<ToSqlOutput<
     )?;
 
     db.commit().context("Could not commit transaction")?;
-    Ok(ToSqlOutput::Owned(Value::Text("Done!".to_string())))
+    // Ok(ToSqlOutput::Owned(Value::Text("Done!".to_string())))
+    Ok("0".into())
 }
 
 fn get_dict_id(column_name: &str) -> String {
