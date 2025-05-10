@@ -7,7 +7,7 @@ use std::os::raw::c_int;
 
 #[expect(clippy::not_unsafe_ptr_arg_deref)]
 #[unsafe(no_mangle)]
-pub extern "C" fn sqlite3_sqlitezstd_init(
+pub extern "C" fn sqlite3_zeestd_init(
     db: *mut ffi::sqlite3,
     pz_err_msg: *mut *mut std::os::raw::c_char,
     p_api: *mut ffi::sqlite3_api_routines,
@@ -25,11 +25,11 @@ pub extern "C" fn sqlite3_sqlitezstd_init(
 fn init(db: Connection) -> rusqlite::Result<bool> {
     match crate::load(&db) {
         Ok(()) => {
-            log::info!("[sqlite-zstd] initialized");
+            log::info!("initialized");
             Ok(false)
         }
         Err(e) => {
-            log::error!("[sqlite-zstd] init error: {:?}", e);
+            log::error!("error: {:?}", e);
             Err(rusqlite::Error::ModuleError(format!("{:?}", e)))
         }
     }
